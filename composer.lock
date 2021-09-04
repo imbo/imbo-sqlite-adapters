@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/imbo/imbo-pdo-adapters.git",
-                "reference": "358988d8c152081ec624ade7736403a8607e993c"
+                "reference": "eade96abb3f6a27b17853fe629ac298bb27672d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imbo/imbo-pdo-adapters/zipball/358988d8c152081ec624ade7736403a8607e993c",
-                "reference": "358988d8c152081ec624ade7736403a8607e993c",
+                "url": "https://api.github.com/repos/imbo/imbo-pdo-adapters/zipball/eade96abb3f6a27b17853fe629ac298bb27672d1",
+                "reference": "eade96abb3f6a27b17853fe629ac298bb27672d1",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "issues": "https://github.com/imbo/imbo-pdo-adapters/issues",
                 "source": "https://github.com/imbo/imbo-pdo-adapters/tree/main"
             },
-            "time": "2021-09-04T12:03:53+00:00"
+            "time": "2021-09-04T12:37:11+00:00"
         }
     ],
     "packages-dev": [
