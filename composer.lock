@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/imbo/imbo-pdo-adapters.git",
-                "reference": "eade96abb3f6a27b17853fe629ac298bb27672d1"
+                "reference": "e0d585c6f243b39a110e6cf387168d0a05bd2b5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imbo/imbo-pdo-adapters/zipball/eade96abb3f6a27b17853fe629ac298bb27672d1",
-                "reference": "eade96abb3f6a27b17853fe629ac298bb27672d1",
+                "url": "https://api.github.com/repos/imbo/imbo-pdo-adapters/zipball/e0d585c6f243b39a110e6cf387168d0a05bd2b5a",
+                "reference": "e0d585c6f243b39a110e6cf387168d0a05bd2b5a",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "issues": "https://github.com/imbo/imbo-pdo-adapters/issues",
                 "source": "https://github.com/imbo/imbo-pdo-adapters/tree/main"
             },
-            "time": "2021-09-04T12:37:11+00:00"
+            "time": "2021-09-04T13:57:25+00:00"
         }
     ],
     "packages-dev": [
@@ -737,12 +737,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/imbo/imbo.git",
-                "reference": "6cd1f23349661706d9176a7af8a19397bf832dae"
+                "reference": "69688da985321aee6f1a1a55ae2dc78f119e8c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imbo/imbo/zipball/6cd1f23349661706d9176a7af8a19397bf832dae",
-                "reference": "6cd1f23349661706d9176a7af8a19397bf832dae",
+                "url": "https://api.github.com/repos/imbo/imbo/zipball/69688da985321aee6f1a1a55ae2dc78f119e8c4e",
+                "reference": "69688da985321aee6f1a1a55ae2dc78f119e8c4e",
                 "shasum": ""
             },
             "require": {
@@ -757,18 +757,24 @@
                 "christeredvartsen/testfs": "^0.3.0",
                 "doctrine/dbal": "^2.10",
                 "imbo/behat-api-extension": "^3.0",
+                "imbo/imbo-adapters-sdk": "dev-main",
                 "imbo/imbo-filesystem-adapters": "dev-main",
                 "imbo/imbo-mongodb-adapters": "dev-main",
+                "imbo/imbo-mysql-adapters": "dev-main",
+                "imbo/imbo-postgresql-adapters": "dev-main",
+                "imbo/imbo-sqlite-adapters": "dev-main",
                 "micheh/psr7-cache": "^0.5",
                 "phpunit/phpunit": "^9.2"
             },
             "suggest": {
-                "doctrine/dbal": "Enables usage of using RDMS for storing data (and optionally images). Recommended version: ^2.9",
                 "imbo/imbo-b2-adapters": "Enables usage of Backblaze B2 for storing images",
                 "imbo/imbo-filesystem-adapters": "Enables usage of a (local) filesystem for storing images",
-                "imbo/imbo-metadata-cache": "Enabled caching of metadata through an event listener. Recommended version ^1.0",
+                "imbo/imbo-metadata-cache": "Enables caching of metadata through an event listener",
                 "imbo/imbo-mongodb-adapters": "Enables usage of MongoDB for storing images",
-                "imbo/imbo-s3-adapters": "Enables usage of AWS S3 for storing images"
+                "imbo/imbo-mysql-adapters": "Enables usage of MySQL as database",
+                "imbo/imbo-postgresql-adapters": "Enables usage of PostgreSQL as database",
+                "imbo/imbo-s3-adapters": "Enables usage of AWS S3 for storing images",
+                "imbo/imbo-sqlite-adapters": "Enables usage of SQLite as database"
             },
             "default-branch": true,
             "bin": [
@@ -809,7 +815,7 @@
                 "issues": "https://github.com/imbo/imbo/issues",
                 "source": "https://github.com/imbo/imbo"
             },
-            "time": "2021-08-30T12:51:05+00:00"
+            "time": "2021-09-04T13:14:47+00:00"
         },
         {
             "name": "imbo/imbo-adapters-sdk",
