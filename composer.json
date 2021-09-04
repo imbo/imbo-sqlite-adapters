@@ -1,0 +1,56 @@
+{
+  "name": "imbo/imbo-sqlite-adapters",
+  "type": "library",
+  "description": "SQLite adapters for Imbo",
+  "keywords": [ "imbo" ],
+  "homepage": "https://imbo.io/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christer Edvartsen",
+      "email": "cogo@starzinger.net",
+      "homepage": "https://github.com/christeredvartsen"
+    }, {
+      "name": "Contributors",
+      "homepage": "https://github.com/imbo"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-pdo": "*",
+    "ext-pdo_sqlite": "*",
+    "imbo/imbo-pdo-adapters": "dev-main"
+  },
+  "require-dev": {
+    "imbo/imbo": "dev-develop",
+    "imbo/imbo-adapters-sdk": "dev-main",
+    "imbo/imbo-coding-standard": "^2.0",
+    "phpunit/phpunit": "^9.3",
+    "psalm/plugin-phpunit": "^0.16.1",
+    "vimeo/psalm": "^4.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Imbo\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Imbo\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --verbose",
+    "test:coverage": "vendor/bin/phpunit --verbose --coverage-html build/coverage --coverage-text",
+    "sa": "vendor/bin/psalm",
+    "cs": "php-cs-fixer fix --dry-run --diff",
+    "ci": [
+      "@sa",
+      "@test",
+      "@cs"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
