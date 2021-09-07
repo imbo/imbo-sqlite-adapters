@@ -22,7 +22,7 @@
     "imbo/imbo-pdo-adapters": "dev-main"
   },
   "require-dev": {
-    "imbo/imbo": "dev-develop",
+    "imbo/imbo": "dev-main",
     "imbo/imbo-adapters-sdk": "dev-main",
     "imbo/imbo-coding-standard": "^2.0",
     "phpunit/phpunit": "^9.3",
