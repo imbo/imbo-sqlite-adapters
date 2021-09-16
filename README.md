@@ -20,7 +20,7 @@ $database = new Imbo\Database\SQLite($dsn, $options);
 
 If you want to run the integration tests you will to create a local SQLite3 database:
 
-    sqlite3 /tmp/imbo-sqlite-integration-test.sql < setup/000-imbo.sql
+    sqlite3 /tmp/imbo-sqlite-integration-test.sq3 < setup/000-imbo.sql
 
 When the database exists with the initial tables created you can execute all tests by simply running PHPUnit:
 
