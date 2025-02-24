@@ -10,7 +10,7 @@ class SQLite extends PDOAdapter
      * Class constructor
      *
      * @param string $dsn Database DSN
-     * @param array $options Driver specific options
+     * @param array<mixed> $options Driver specific options
      */
     public function __construct(string $dsn, array $options = [])
     {
