@@ -2,10 +2,9 @@
 namespace Imbo\Database;
 
 use PDO;
+use PHPUnit\Framework\Attributes\CoversClass;
 
-/**
- * @coversDefaultClass Imbo\Database\SQLite
- */
+#[CoversClass(SQLite::class)]
 class SQLiteIntegrationTest extends DatabaseTests
 {
     private PDO $pdo;
@@ -66,7 +65,10 @@ class SQLiteIntegrationTest extends DatabaseTests
     {
         parent::setUp();
 
-        $this->pdo = new PDO((string) getenv('DB_DSN'));
+        $this->pdo = new PDO(
+            dsn: (string) getenv('DB_DSN'),
+            options: [PDO::ATTR_PERSISTENT => true],
+        );
 
         $tables = [
             SQLite::IMAGEINFO_TABLE,
@@ -74,7 +76,7 @@ class SQLiteIntegrationTest extends DatabaseTests
         ];
 
         foreach ($tables as $table) {
-            $this->pdo->query("DELETE FROM `{$table}`");
+            $this->pdo->exec("DELETE FROM `{$table}`");
         }
     }
 }

@@ -1,4 +1,8 @@
-CREATE TABLE IF NOT EXISTS imageinfo (
+DROP TABLE IF EXISTS imageinfo;
+DROP TABLE IF EXISTS shorturl;
+DROP TABLE IF EXISTS imagevariations;
+
+CREATE TABLE imageinfo (
     id INTEGER PRIMARY KEY NOT NULL,
     user TEXT NOT NULL,
     imageIdentifier TEXT NOT NULL,
@@ -15,7 +19,7 @@ CREATE TABLE IF NOT EXISTS imageinfo (
     UNIQUE (user,imageIdentifier)
 );
 
-CREATE TABLE IF NOT EXISTS shorturl (
+CREATE TABLE shorturl (
     shortUrlId TEXT PRIMARY KEY NOT NULL,
     user TEXT NOT NULL,
     imageIdentifier TEXT NOT NULL,
@@ -30,7 +34,7 @@ CREATE INDEX shorturlparams ON shorturl (
     query
 );
 
-CREATE TABLE IF NOT EXISTS imagevariations (
+CREATE TABLE imagevariations (
     user TEXT NOT NULL,
     imageIdentifier TEXT NOT NULL,
     width INTEGER NOT NULL,

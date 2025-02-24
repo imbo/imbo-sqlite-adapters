@@ -2,10 +2,9 @@
 namespace Imbo\EventListener\ImageVariations\Database;
 
 use PDO;
+use PHPUnit\Framework\Attributes\CoversClass;
 
-/**
- * @coversDefaultClass Imbo\EventListener\ImageVariations\Database\SQLite
- */
+#[CoversClass(SQLite::class)]
 class SQLiteIntegrationTest extends DatabaseTests
 {
     protected function getAdapter(): SQLite
@@ -17,7 +16,11 @@ class SQLiteIntegrationTest extends DatabaseTests
     {
         parent::setUp();
 
-        $pdo = new PDO((string) getenv('DB_DSN'));
-        $pdo->query(sprintf("DELETE FROM `%s`", SQLite::IMAGEVARIATIONS_TABLE));
+        $pdo = new PDO(
+            dsn: (string) getenv('DB_DSN'),
+            options: [PDO::ATTR_PERSISTENT => true],
+        );
+        $table = SQLite::IMAGEVARIATIONS_TABLE;
+        $pdo->exec("DELETE FROM `{$table}`");
     }
 }
